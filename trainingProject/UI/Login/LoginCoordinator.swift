@@ -14,28 +14,34 @@ protocol LoginCoordinatorDelegate: AnyObject {
 class LoginCoordinator {
     
     // MARK: Parameters
-    var initialViewController: UIViewController { return containerViewController }
+    var initialViewController: UIViewController { return navigationController }
     weak var delegate: LoginCoordinatorDelegate?
-    private var containerViewController: SimpleContainerViewController
+    private let navigationController: UINavigationController
     
     // MARK: Class life cycle
     init() {
-        self.containerViewController = SimpleContainerViewController()
+        navigationController = UINavigationController()
+        let welcomeViewController = WelcomeViewController()
+        welcomeViewController.delegate = self
+        navigationController.viewControllers = [welcomeViewController]
     }
     
     // MARK: private functions
-    private func showWelcome() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.delegate = self
-        self.containerViewController.childViewController = welcomeViewController
+    private func showLogin() {
+        let loginViewController = LoginViewController()
+        loginViewController.delegate = self
+        navigationController.pushViewController(loginViewController, animated: true)
     }
-    
 }
 
 extension LoginCoordinator: WelcomeViewControllerDelegate {
-    
-    func welcomeViewControllerDidSelectContinue(_ controller: WelcomeViewController) {
-        showWelcome()
+    func welcomeViewControllerDidSelectLogin(_ controller: WelcomeViewController) {
+        showLogin()
     }
-    
+}
+
+extension LoginCoordinator: LoginViewControllerDelegate {
+    func loginViewControllerDidSelectLogin(_ controller: LoginViewController) {
+        
+    }
 }

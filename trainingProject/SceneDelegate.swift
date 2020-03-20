@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let appCoondinator = AppCoordinator(currentUserInfoProvider: UserInfo(userId: "", appId: ""))
+        let appCoondinator = AppCoordinator(currentUserInfoProvider: UserInfo(userId: "0", appId: "1"))
 
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = appCoondinator.initialViewController

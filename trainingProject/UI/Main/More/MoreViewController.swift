@@ -1,6 +1,6 @@
 //
 //  MoreViewController.swift
-//  FasenraPOC
+//  POC
 //
 //  Created by Tarek Abdala on 25/02/19.
 //  Copyright © 2019 AstraZeneca. All rights reserved.

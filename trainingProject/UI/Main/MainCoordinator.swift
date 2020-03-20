@@ -1,6 +1,6 @@
 //
 //  MainCoordinator.swift
-//  Fasenra
+//  
 //
 
 import UIKit
@@ -14,7 +14,8 @@ class MainCoordinator {
     // MARK: Parameters
     var initialViewController: UIViewController { return UIViewController() }
     weak var delegate: MainCoordinatorDelegate?
-    
+    private let moreCoordinator = MoreCoordinator()
+
     // MARK: Class life cycle
     init() {
     }

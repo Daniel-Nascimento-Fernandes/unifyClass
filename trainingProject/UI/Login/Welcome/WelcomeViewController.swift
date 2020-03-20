@@ -8,7 +8,7 @@
 import UIKit
 
 protocol WelcomeViewControllerDelegate: AnyObject {
-    func welcomeViewControllerDidSelectContinue(_ controller: WelcomeViewController)
+    func welcomeViewControllerDidSelectLogin(_ controller: WelcomeViewController)
 }
 
 class WelcomeViewController: UIViewController {
@@ -25,4 +25,8 @@ class WelcomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: IBAction
+    @IBAction func didSelectLogin(_ sender: UIButton) {
+        self.delegate?.welcomeViewControllerDidSelectLogin(self)
+    }
 }
