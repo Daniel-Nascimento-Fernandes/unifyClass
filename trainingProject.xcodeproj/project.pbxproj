@@ -20,7 +20,6 @@
 		A13BE5E3242285DC008694B0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5E2242285DB008694B0 /* MainCoordinator.swift */; };
 		A13BE5E52422C27F008694B0 /* DMDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5E42422C27F008694B0 /* DMDP.swift */; };
 		A13BE5ED2422C702008694B0 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5E92422C702008694B0 /* MoreViewController.swift */; };
-		A13BE5EE2422C702008694B0 /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5EA2422C702008694B0 /* MoreCoordinator.swift */; };
 		A13BE5F02422C702008694B0 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13BE5EC2422C702008694B0 /* MoreViewController.xib */; };
 		A13BE5F324237A9B008694B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5F124237A9B008694B0 /* LoginViewController.swift */; };
 		A13BE5F424237A9B008694B0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13BE5F224237A9B008694B0 /* LoginViewController.xib */; };
@@ -54,7 +53,6 @@
 		A13BE5E2242285DB008694B0 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A13BE5E42422C27F008694B0 /* DMDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMDP.swift; sourceTree = "<group>"; };
 		A13BE5E92422C702008694B0 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		A13BE5EA2422C702008694B0 /* MoreCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		A13BE5EC2422C702008694B0 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		A13BE5F124237A9B008694B0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A13BE5F224237A9B008694B0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 		A13BE5E82422C6F6008694B0 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				A13BE5EA2422C702008694B0 /* MoreCoordinator.swift */,
 				A13BE5E92422C702008694B0 /* MoreViewController.swift */,
 				A13BE5EC2422C702008694B0 /* MoreViewController.xib */,
 			);
@@ -318,7 +315,6 @@
 				A13BE5F324237A9B008694B0 /* LoginViewController.swift in Sources */,
 				A13BE5E52422C27F008694B0 /* DMDP.swift in Sources */,
 				A13BE5B424227D9F008694B0 /* AppCoordinator.swift in Sources */,
-				A13BE5EE2422C702008694B0 /* MoreCoordinator.swift in Sources */,
 				A13BE5DE24228160008694B0 /* WelcomeViewController.swift in Sources */,
 				A13BE5B024227D9F008694B0 /* AppDelegate.swift in Sources */,
 				A13BE5DA24228159008694B0 /* LoginCoordinator.swift in Sources */,

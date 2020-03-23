@@ -19,21 +19,21 @@ class AppCoordinator {
     init(currentUserInfoProvider: UserInfo) {
         self.containerViewController = SimpleContainerViewController()
         if currentUserInfoProvider.hasValidLogin() {
-            self.showLoginCoordinator()
+            self.showLogin()
         } else {
-            self.showMainCoordinator()
+            self.showMain()
         }
     }
 
     // MARK: private functions
-    private func showLoginCoordinator() {
+    private func showLogin() {
         let loginCoordinator = LoginCoordinator()
         loginCoordinator.delegate = self
         currentChildCoordinator = loginCoordinator
         containerViewController.childViewController = loginCoordinator.initialViewController
     }
     
-    private func showMainCoordinator() {
+    private func showMain() {
         let mainCoordinator = MainCoordinator()
         mainCoordinator.delegate = self
         currentChildCoordinator = mainCoordinator
@@ -44,12 +44,12 @@ class AppCoordinator {
 
 extension AppCoordinator: LoginCoordinatorDelegate {
     func loginCoordinatorDidLoginSuccessfully(_ coordinator: LoginCoordinator) {
-        showMainCoordinator()
+        showMain()
     }
 }
 
 extension AppCoordinator: MainCoordinatorDelegate {
     func mainCoordinatorDidSelectLogout(_ coordinator: MainCoordinator) {
-        showLoginCoordinator()
+        showLogin()
     }
 }

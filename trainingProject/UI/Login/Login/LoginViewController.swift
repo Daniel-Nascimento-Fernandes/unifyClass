@@ -11,7 +11,7 @@ protocol LoginViewControllerDelegate: AnyObject {
 class LoginViewController: UIViewController {
     
     // MARK: Parameters
-    weak var delegate: LoginViewControllerDelegate?
+    var delegate: LoginViewControllerDelegate?
 
     init() {
         super.init(nibName: "LoginViewController", bundle: nil)
@@ -19,6 +19,10 @@ class LoginViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @IBAction func didSelectLoginButton(_ sender: Any) {
+        delegate?.loginViewControllerDidSelectLogin(self)
     }
     
 }

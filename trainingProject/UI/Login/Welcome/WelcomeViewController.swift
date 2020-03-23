@@ -14,8 +14,11 @@ protocol WelcomeViewControllerDelegate: AnyObject {
 class WelcomeViewController: UIViewController {
     
     // MARK: Parameters
-    weak var delegate: WelcomeViewControllerDelegate?
+    var delegate: WelcomeViewControllerDelegate?
     
+    override func viewDidLoad() {
+        
+    }
     // MARK: Class life cycle
     init() {
         super.init(nibName: "WelcomeViewController", bundle: nil)

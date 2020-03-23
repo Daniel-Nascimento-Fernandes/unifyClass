@@ -15,9 +15,11 @@ class LoginCoordinator {
     
     // MARK: Parameters
     var initialViewController: UIViewController { return navigationController }
-    weak var delegate: LoginCoordinatorDelegate?
-    private let navigationController: UINavigationController
     
+    var delegate: LoginCoordinatorDelegate?
+
+    private let navigationController: UINavigationController
+
     // MARK: Class life cycle
     init() {
         navigationController = UINavigationController()
@@ -42,6 +44,6 @@ extension LoginCoordinator: WelcomeViewControllerDelegate {
 
 extension LoginCoordinator: LoginViewControllerDelegate {
     func loginViewControllerDidSelectLogin(_ controller: LoginViewController) {
-        
+        delegate?.loginCoordinatorDidLoginSuccessfully(self)
     }
 }

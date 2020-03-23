@@ -12,17 +12,24 @@ protocol MainCoordinatorDelegate: AnyObject {
 class MainCoordinator {
     
     // MARK: Parameters
-    var initialViewController: UIViewController { return UIViewController() }
+    var initialViewController: UIViewController { return navigationController }
     weak var delegate: MainCoordinatorDelegate?
-    private let moreCoordinator = MoreCoordinator()
 
+    private let navigationController: UINavigationController
+
+    
     // MARK: Class life cycle
     init() {
+        navigationController = UINavigationController()
+        let moreViewController = MoreViewController()
+        moreViewController.delegate = self
+        navigationController.viewControllers = [moreViewController]
     }
+    
 }
 
-extension MainCoordinator: MoreCoordinatorDelegate {
-    func moreCoordinatorDidSelectLogout(_ coordinator: MoreCoordinator) {
-        delegate?.mainCoordinatorDidSelectLogout(self)
-    }    
+extension MainCoordinator: MoreViewControllerDelegate {
+    func moreViewControllerDidSelectShowMyAccount(_ controller: MoreViewController) {
+        
+    }
 }

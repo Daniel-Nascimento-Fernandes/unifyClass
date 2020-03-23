@@ -13,5 +13,17 @@ protocol MoreViewControllerDelegate: AnyObject {
 }
 
 class MoreViewController: UIViewController {
+    
+    // MARK: Parameters
+    weak var delegate: MoreViewControllerDelegate?
 
+    init() {
+        super.init(nibName: "LoginViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
 }
