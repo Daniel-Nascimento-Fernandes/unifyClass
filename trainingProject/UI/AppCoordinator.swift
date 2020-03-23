@@ -37,7 +37,7 @@ class AppCoordinator {
         let mainCoordinator = MainCoordinator()
         mainCoordinator.delegate = self
         currentChildCoordinator = mainCoordinator
-        containerViewController.childViewController = mainCoordinator.initialViewController
+        containerViewController.childViewController = mainCoordinator.initialViewController        
     }
     
 }

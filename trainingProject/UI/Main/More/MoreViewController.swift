@@ -18,7 +18,7 @@ class MoreViewController: UIViewController {
     weak var delegate: MoreViewControllerDelegate?
 
     init() {
-        super.init(nibName: "LoginViewController", bundle: nil)
+        super.init(nibName: "MoreViewController", bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
