@@ -16,20 +16,19 @@ class MainCoordinator {
     weak var delegate: MainCoordinatorDelegate?
 
     private let navigationController: UINavigationController
-
     
     // MARK: Class life cycle
     init() {
         navigationController = UINavigationController()
-        let moreViewController = MoreViewController()
-        moreViewController.delegate = self
-        navigationController.viewControllers = [moreViewController]
+        let dashboardViewController = DashboardViewController()
+        dashboardViewController.delegate = self
+        navigationController.viewControllers = [dashboardViewController]
     }
     
 }
 
-extension MainCoordinator: MoreViewControllerDelegate {
-    func moreViewControllerDidSelectShowMyAccount(_ controller: MoreViewController) {
+extension MainCoordinator: DashboardViewControllerDelegate {
+    func DashboardViewControllerDidSelectShowMyAccount(_ controller: DashboardViewController) {
         
     }
 }

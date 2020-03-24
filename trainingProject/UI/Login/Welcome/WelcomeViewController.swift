@@ -15,12 +15,15 @@ class WelcomeViewController: UIViewController {
     
     // MARK: Parameters
     var delegate: WelcomeViewControllerDelegate?
+    private let viewModel: WelcomeViewModel
     
     override func viewDidLoad() {
         
     }
+    
     // MARK: Class life cycle
-    init() {
+    init(viewModel: WelcomeViewModel = DefaultWelcomeViewModel()) {
+        self.viewModel = viewModel
         super.init(nibName: "WelcomeViewController", bundle: nil)
     }
     

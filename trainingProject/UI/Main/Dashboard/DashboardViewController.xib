@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="trainingProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="trainingProject" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="kas-NH-8AP"/>
             </connections>
@@ -17,17 +17,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90O-Xy-Owu">
-                    <rect key="frame" x="107" y="323" width="161" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="qgK-jN-sZF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qgK-jN-sZF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="B6t-jO-Gly"/>
+                <constraint firstItem="qgK-jN-sZF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VyS-M7-A9r"/>
+                <constraint firstItem="qgK-jN-sZF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gg4-ue-xHv"/>
+                <constraint firstItem="qgK-jN-sZF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uW8-ZW-E8y"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
+    <resources>
+        <image name="dashboard" width="220" height="478"/>
+    </resources>
 </document>

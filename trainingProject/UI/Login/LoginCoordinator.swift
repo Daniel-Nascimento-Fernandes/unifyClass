@@ -25,7 +25,7 @@ class LoginCoordinator {
         navigationController = UINavigationController()
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.delegate = self
-        navigationController.viewControllers = [welcomeViewController]
+        navigationController.viewControllers = [welcomeViewController]        
     }
     
     // MARK: private functions
