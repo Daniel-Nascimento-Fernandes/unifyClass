@@ -1,5 +1,5 @@
 //
-//  UserSession.swift
+//  User.swift
 //  trainingProject
 //
 //  Created by Tarek Abdala on 26/03/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserSession {
+struct User {
     
     enum userType {
         case guest
@@ -25,12 +25,6 @@ struct UserSession {
         self.token = token
         self.loginDate = loginDate
         self.userType = userType
-    }
-    
-    init(injectionDate: Date, prescribedDate: Date, site: Site?) {
-        self.injectionDate = injectionDate
-        self.prescribedDate = prescribedDate
-        self.site = site
     }
     
 }

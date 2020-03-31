@@ -24,10 +24,15 @@
 		A13BE5F02422C702008694B0 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13BE5EC2422C702008694B0 /* DashboardViewController.xib */; };
 		A13BE5F324237A9B008694B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13BE5F124237A9B008694B0 /* LoginViewController.swift */; };
 		A13BE5F424237A9B008694B0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13BE5F224237A9B008694B0 /* LoginViewController.xib */; };
-		A144216B242CEBA0007BE08D /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216A242CEBA0007BE08D /* UserSession.swift */; };
-		A144216C242CEBA0007BE08D /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216A242CEBA0007BE08D /* UserSession.swift */; };
+		A144216B242CEBA0007BE08D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216A242CEBA0007BE08D /* User.swift */; };
+		A144216C242CEBA0007BE08D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216A242CEBA0007BE08D /* User.swift */; };
 		A144216E242CEBB6007BE08D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216D242CEBB6007BE08D /* LoginService.swift */; };
 		A144216F242CEBB6007BE08D /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A144216D242CEBB6007BE08D /* LoginService.swift */; };
+		A1725852243358CE006A9D49 /* LocalDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1725850243358CE006A9D49 /* LocalDB.xcdatamodeld */; };
+		A1725853243358CE006A9D49 /* LocalDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1725850243358CE006A9D49 /* LocalDB.xcdatamodeld */; };
+		A1725856243358FC006A9D49 /* LocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1725855243358FC006A9D49 /* LocalDB.swift */; };
+		A1725857243358FC006A9D49 /* LocalDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1725855243358FC006A9D49 /* LocalDB.swift */; };
+		A172585A24335A8F006A9D49 /* UserLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A172585924335A8F006A9D49 /* UserLocal.swift */; };
 		A1D61C6E242A63340020FB42 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D61C6D242A63340020FB42 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +68,11 @@
 		A13BE5EC2422C702008694B0 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		A13BE5F124237A9B008694B0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A13BE5F224237A9B008694B0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		A144216A242CEBA0007BE08D /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		A144216A242CEBA0007BE08D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A144216D242CEBB6007BE08D /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		A1725851243358CE006A9D49 /* LocalDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalDB.xcdatamodel; sourceTree = "<group>"; };
+		A1725855243358FC006A9D49 /* LocalDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDB.swift; sourceTree = "<group>"; };
+		A172585924335A8F006A9D49 /* UserLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocal.swift; sourceTree = "<group>"; };
 		A1D61C6D242A63340020FB42 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +197,7 @@
 		A13BE5C924227F23008694B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A1442169242CEB61007BE08D /* LoginHandler */,
+				A1442169242CEB61007BE08D /* Login */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,6 +205,8 @@
 		A13BE5CA24227F42008694B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A1725858243359E7006A9D49 /* User */,
+				A1725854243358E8006A9D49 /* Common */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -228,13 +238,30 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		A1442169242CEB61007BE08D /* LoginHandler */ = {
+		A1442169242CEB61007BE08D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A144216A242CEBA0007BE08D /* UserSession.swift */,
+				A144216A242CEBA0007BE08D /* User.swift */,
 				A144216D242CEBB6007BE08D /* LoginService.swift */,
 			);
-			path = LoginHandler;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A1725854243358E8006A9D49 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A1725850243358CE006A9D49 /* LocalDB.xcdatamodeld */,
+				A1725855243358FC006A9D49 /* LocalDB.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A1725858243359E7006A9D49 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A172585924335A8F006A9D49 /* UserLocal.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,15 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1725856243358FC006A9D49 /* LocalDB.swift in Sources */,
 				A13BE5ED2422C702008694B0 /* DashboardViewController.swift in Sources */,
 				A13BE5E1242282F8008694B0 /* SimpleContainerViewController.swift in Sources */,
 				A13BE5E3242285DC008694B0 /* MainCoordinator.swift in Sources */,
+				A172585A24335A8F006A9D49 /* UserLocal.swift in Sources */,
 				A13BE5F324237A9B008694B0 /* LoginViewController.swift in Sources */,
-				A144216B242CEBA0007BE08D /* UserSession.swift in Sources */,
+				A144216B242CEBA0007BE08D /* User.swift in Sources */,
 				A144216E242CEBB6007BE08D /* LoginService.swift in Sources */,
 				A13BE5E52422C27F008694B0 /* DMDP.swift in Sources */,
 				A13BE5B424227D9F008694B0 /* AppCoordinator.swift in Sources */,
 				A1D61C6E242A63340020FB42 /* LoginViewModel.swift in Sources */,
+				A1725852243358CE006A9D49 /* LocalDB.xcdatamodeld in Sources */,
 				A13BE5DE24228160008694B0 /* WelcomeViewController.swift in Sources */,
 				A13BE5B024227D9F008694B0 /* AppDelegate.swift in Sources */,
 				A13BE5DA24228159008694B0 /* LoginCoordinator.swift in Sources */,
@@ -360,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1725857243358FC006A9D49 /* LocalDB.swift in Sources */,
 				A13BE5D224227F95008694B0 /* trainingProjectTests.swift in Sources */,
+				A1725853243358CE006A9D49 /* LocalDB.xcdatamodeld in Sources */,
 				A144216F242CEBB6007BE08D /* LoginService.swift in Sources */,
-				A144216C242CEBA0007BE08D /* UserSession.swift in Sources */,
+				A144216C242CEBA0007BE08D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +639,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1725850243358CE006A9D49 /* LocalDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1725851243358CE006A9D49 /* LocalDB.xcdatamodel */,
+			);
+			currentVersion = A1725851243358CE006A9D49 /* LocalDB.xcdatamodel */;
+			path = LocalDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A13BE5A424227D9F008694B0 /* Project object */;
 }
