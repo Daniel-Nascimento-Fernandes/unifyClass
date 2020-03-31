@@ -9,10 +9,6 @@
 import Foundation
 
 protocol LoginService {
-    
-    var userName: String { get }
-    var password: String { get }
-
-    func signIn(injection: Injection) throws
+    func signIn(userName: String, password: String) throws -> User
     func signOut() throws
 }
